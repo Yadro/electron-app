@@ -3,12 +3,11 @@
 import {chrome} from '../../electron-vendors.config.json';
 import {join} from 'path';
 import {builtinModules} from 'module';
-import vue from '@vitejs/plugin-vue';
+import react from '@vitejs/plugin-react';
 
 const PACKAGE_ROOT = __dirname;
 
 /**
- * @type {import('vite').UserConfig}
  * @see https://vitejs.dev/config/
  */
 const config = {
@@ -19,7 +18,7 @@ const config = {
       '/@/': join(PACKAGE_ROOT, 'src') + '/',
     },
   },
-  plugins: [vue()],
+  plugins: [react()],
   base: '',
   server: {
     fs: {
