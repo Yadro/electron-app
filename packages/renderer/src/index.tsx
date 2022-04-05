@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { render } from 'react-dom';
+import {render} from 'react-dom';
+import {Hello} from './components/Hello';
 
 const element = (
-  <div>
-    <h1>Hello world!</h1>
-  </div>
+  <Hello />
 );
 
 render(element, document.getElementById('app'));

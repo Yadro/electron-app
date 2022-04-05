@@ -1,4 +1,5 @@
-import React, {memo} from 'react';
+import * as React from 'react';
+import {memo} from 'react';
 import type {FC} from 'react';
 
 const versions = Object.entries(window.versions)
@@ -11,7 +12,9 @@ const ElectronVersions: FC = () => {
         <>
             <ul>
                 {versions.map(([lib, version]) => (
-                    <li><strong>{lib}</strong>{`: v${version}`}</li>
+                    <li key={lib}>
+                        <strong>{lib}</strong>{`: v${version}`}
+                    </li>
                 ))}
             </ul>
             <code>packages/renderer/src/components/ElectronVersions.tsx</code>
