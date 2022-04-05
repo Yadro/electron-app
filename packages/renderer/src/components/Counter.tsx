@@ -8,8 +8,8 @@ export const Counter: FC = () => {
 
     return (
         <p>
-            <span style={{marginRight: 5}}>{count}</span>
-            <button onClick={() => setCount(count + 1)}>+1</button>
+            <span style={{marginRight: 5}}>Counter: {count}</span>
+            <button onClick={() => setCount(count + 1)}>+ 1</button>
         </p>
     );
 };
